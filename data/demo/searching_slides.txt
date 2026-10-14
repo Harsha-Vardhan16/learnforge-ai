@@ -1,0 +1,21 @@
+PRESENTATION: SEARCHING & SORTING MASTERCLASS
+
+[Slide 12]
+Binary Search Invariants:
+- Initial state: low = 0, high = len(arr) - 1
+- Search interval: while low <= high
+- Invariant: If target is in array, it is bounded inside arr[low..high]
+- Terminates with -1 if low exceeds high.
+
+[Slide 17]
+Midpoint Arithmetic & Integer Overflow:
+In languages with fixed-width 32-bit integers, calculating mid as (low + high) // 2 
+can trigger overflow when low + high exceeds 2,147,483,647.
+Safe implementation: mid = low + (high - low) // 2.
+
+[Slide 22]
+Tree Traversals via Recursion:
+Depth-First Search traversals leverage the call stack naturally:
+- Preorder: Root -> Left -> Right
+- Inorder: Left -> Root -> Right (produces sorted order in BST)
+- Postorder: Left -> Right -> Root (used for memory cleanup)

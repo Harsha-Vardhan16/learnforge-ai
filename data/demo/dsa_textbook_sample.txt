@@ -1,0 +1,27 @@
+CHAPTER 3: DIVIDE AND CONQUER & RECURSION
+
+[Page 42]
+Binary Search Algorithm:
+Binary search is an optimal search algorithm for monotonically sorted indexed arrays. 
+Given target element T, the algorithm computes the midpoint:
+    mid = low + (high - low) // 2
+Comparing T with arr[mid] allows discarding half of the candidate space in O(1) time.
+Recurrence relation: T(n) = T(n/2) + O(1), yielding logarithmic time complexity O(log n).
+
+[Page 58]
+Recursion Mechanics and Invariants:
+Recursion is a problem-solving pattern where a function decomposes a problem by invoking itself on smaller subproblems.
+Every valid recursive formulation requires:
+1. One or more base cases that terminate execution and return a concrete value without further recursion.
+2. A recursive progression that strictly converges toward the base case.
+Without a base case, the activation records on the process call stack grow unbounded, triggering a fatal StackOverflowError.
+
+[Page 76]
+Merge Sort and Asymptotic Guarantees:
+Merge sort splits an array of size n into two halves of size n/2, sorts both halves recursively, and merges them in linear time.
+By the Master Theorem, T(n) = 2T(n/2) + O(n) guarantees O(n log n) across best, average, and worst cases.
+
+[Page 94]
+Binary Search Trees (BST):
+A Binary Search Tree is a hierarchical node structure where all keys in the left subtree of node N are strictly less than N.val,
+and all keys in the right subtree are strictly greater. Inorder traversal (Left, Root, Right) outputs keys in sorted order.

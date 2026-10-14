@@ -1,0 +1,10 @@
+WEBVTT - DSA Lecture 3: Recursion and Trees
+
+00:12:34.000 --> 00:13:09.000
+Welcome back everyone. Today we are diving into recursion. Notice how the call stack works. When a function calls itself, Python pushes an activation frame. If your base case is missing, those frames keep piling up until memory runs out. That is what we call stack overflow. Always test your base case first.
+
+00:23:40.000 --> 00:24:25.000
+Let's trace factorial of 4 on the board. factorial(4) calls factorial(3), which calls factorial(2), which calls factorial(1). At factorial(1), we finally hit the base case: return 1. Now the call stack unwinds! 2 times 1 is 2, 3 times 2 is 6, 4 times 6 is 24. The base case is what enables the unwinding.
+
+00:32:14.000 --> 00:32:58.000
+Moving on to Binary Search Trees. Look at how recursion makes tree traversals elegant. To do an Inorder traversal, you visit the left child recursively, print the root node, then visit the right child recursively. Because smaller keys sit on the left and larger on the right, Inorder traversal prints every key in ascending sorted order.
